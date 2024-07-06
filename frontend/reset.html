@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServiceTrack - Reset Password</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>ServiceTrack</h1>
+        <div class="header-buttons">
+          <button
+            class="reset-password-btn"
+            onclick="location.href='reset.html'"
+          >
+            Reset Password
+          </button>
+          <button class="signout-btn" onclick="location.href='login.html'">
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="form-container">
+        <form id="reset-password-form" class="form">
+          <h2>Reset Password</h2>
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="current-password"
+            placeholder="Current Password"
+            required
+          />
+          <input
+            type="password"
+            id="new-password"
+            placeholder="New Password"
+            required
+          />
+          <button type="submit" id="reset-password-btn">Reset Password</button>
+        </form>
+      </div>
+    </div>
+    <script src="reset.js"></script>
+  </body>
+</html>

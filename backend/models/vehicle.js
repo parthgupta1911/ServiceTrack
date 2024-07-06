@@ -36,6 +36,12 @@ const vehicleSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  services: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Service",
+    },
+  ],
 });
 
 const Vehicle = mongoose.model("Vehicle", vehicleSchema);

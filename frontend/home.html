@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServiceTrack - Home</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>ServiceTrack</h1>
+        <div class="header-buttons">
+          <button
+            class="reset-password-btn btn"
+            onclick="location.href='reset.html'"
+          >
+            Reset Password
+          </button>
+          <button class="signout-btn btn" onclick="location.href='login.html'">
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="mech-box" class="hidden">
+      <h2>Welcome</h2>
+      <p>Services Scheduled for today are:</p>
+    </div>
+    <div id="other" class="container">
+      <div id="user-info">
+        <!-- User information will be displayed here -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="service-list"></div>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>

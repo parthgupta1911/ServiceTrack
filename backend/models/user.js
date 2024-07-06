@@ -38,6 +38,12 @@ const userSchema = new mongoose.Schema({
       type: Date,
     },
   },
+  services: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Service",
+    },
+  ],
 });
 
 const User = mongoose.model("User", userSchema);

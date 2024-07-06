@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServiceTrack - Login and Signup</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>ServiceTrack</h1>
+        <div class="header-buttons">
+          <button
+            class="reset-password-btn"
+            onclick="location.href='reset.html'"
+          >
+            Reset Password
+          </button>
+          <button class="signout-btn" onclick="location.href='login.html'">
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="form-container">
+        <div class="form-toggle">
+          <button id="login-toggle" onclick="toggleForm('login')">Login</button>
+          <button id="signup-toggle" onclick="toggleForm('signup')">
+            Signup
+          </button>
+        </div>
+
+        <form id="login-form" class="form">
+          <h2 id="text">Login</h2>
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" id="login-btn">Login</button>
+          <a
+            href="#"
+            class="forgot-password"
+            onclick="toggleForm('forgot-password')"
+            >Forgot Password?</a
+          >
+        </form>
+
+        <form id="signup-form" class="form hidden">
+          <h2>Signup</h2>
+          <input type="text" id="signup-name" placeholder="Name" required />
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            required
+          />
+          <button id="signup-btn" type="submit">Signup</button>
+        </form>
+
+        <form id="forgot-password-form" class="form hidden">
+          <h2>Forgot Password</h2>
+          <input
+            type="email"
+            id="forgot-password-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            id="otp"
+            placeholder="OTP"
+            class="hidden"
+            required
+          />
+          <input
+            type="password"
+            id="new-password"
+            class="hidden"
+            placeholder="New Password"
+            required
+          />
+          <button type="submit" id="otp-btn">Send OTP</button>
+          <button type="submit" id="reset-password-btn" class="hidden">
+            Change Password
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
